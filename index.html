@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Testa ou Estoura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Testa ou Estoura</h1>
+
+  <div id="selecao-dificuldade">
+    <p>Escolha o nível de dificuldade:</p>
+    <button onclick="iniciarJogo('fácil')">Fácil</button>
+    <button onclick="iniciarJogo('médio')">Médio</button>
+    <button onclick="iniciarJogo('difícil')">Difícil</button>
+  </div>
+
+  <div id="jogo" style="display:none">
+    <p id="texto-modulo">Carregando módulo...</p>
+
+    <div id="opcoes">
+      <button onclick="selecionarTeste('unitário')">Teste Unitário</button>
+      <button onclick="selecionarTeste('integração')">Teste de Integração</button>
+      <button onclick="selecionarTeste('sistema')">Teste de Sistema</button>
+      <button onclick="selecionarTeste('aceitação')">Teste de Aceitação</button>
+    </div>
+
+    <div id="area-dica">
+      <button onclick="mostrarDica()">Ver Dica</button>
+      <p id="dica" style="font-style: italic;"></p>
+    </div>
+
+    <p id="retorno"></p>
+    <p>Cronômetro: <span id="cronometro">10</span> segundos</p>
+
+    <div id="barra-container">
+      <div id="barra-progresso"></div>
+    </div>
+
+    <p>Pontuação: <span id="pontuacao">0</span></p>
+    <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
